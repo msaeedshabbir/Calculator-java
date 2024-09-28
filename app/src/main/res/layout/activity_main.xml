@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".MainActivity">
+
+    <!-- Display for result -->
+    <TextView
+        android:id="@+id/resultText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:gravity="end"
+        android:text="0"
+        android:textSize="36sp"
+        android:padding="16dp"
+        android:background="@drawable/textview_border"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Button rows for digits and operations -->
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        android:columnCount="4"
+        android:rowCount="5"
+        android:background="#999797"
+        app:layout_constraintTop_toBottomOf="@+id/resultText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- Number Buttons -->
+        <Button android:id="@+id/btn7" android:text="7" style="@style/ButtonStyle" />
+        <Button android:id="@+id/btn8" android:text="8" style="@style/ButtonStyle" />
+        <Button android:id="@+id/btn9" android:text="9" style="@style/ButtonStyle" />
+        <Button android:id="@+id/btnDiv" android:text="/" style="@style/ButtonStyle" />
+
+        <Button android:id="@+id/btn4" android:text="4" style="@style/ButtonStyle" />
+        <Button android:id="@+id/btn5" android:text="5" style="@style/ButtonStyle" />
+        <Button android:id="@+id/btn6" android:text="6" style="@style/ButtonStyle" />
+        <Button android:id="@+id/btnMul" android:text="*" style="@style/ButtonStyle" />
+
+        <Button android:id="@+id/btn1" android:text="1" style="@style/ButtonStyle" />
+        <Button android:id="@+id/btn2" android:text="2" style="@style/ButtonStyle" />
+        <Button android:id="@+id/btn3" android:text="3" style="@style/ButtonStyle" />
+        <Button android:id="@+id/btnSub" android:text="-" style="@style/ButtonStyle" />
+
+        <Button android:id="@+id/btn0" android:text="0" style="@style/ButtonStyle" />
+        <Button android:id="@+id/btnClear" android:text="C" style="@style/ButtonStyle" />
+        <Button android:id="@+id/btnEqual" android:text="=" style="@style/ButtonStyle" />
+        <Button android:id="@+id/btnAdd" android:text="+" style="@style/ButtonStyle" />
+
+    </GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
